@@ -17,6 +17,8 @@ public class ActionAmazone {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.amazon.in/");
 		
+		
+		
 		Actions action= new Actions(driver);
 		WebElement web1 = driver.findElement(By.xpath("//a[@id='nav-link-accountList']"));
 		WebElement web2 = driver.findElement(By.xpath("//div[@id='nav-al-your-account']/a[1]/span"));

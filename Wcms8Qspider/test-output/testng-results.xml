@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-07T09:31:30 IST" name="Default suite" finished-at="2023-05-07T09:31:30 IST" duration-ms="113">
+  <suite started-at="2023-05-19T09:12:44 IST" name="Default suite" finished-at="2023-05-19T09:12:45 IST" duration-ms="70">
     <groups>
     </groups>
-    <test started-at="2023-05-07T09:31:30 IST" name="Default test" finished-at="2023-05-07T09:31:30 IST" duration-ms="113">
-      <class name="com.locator.TestNg">
-        <test-method signature="abc()[pri:0, instance:com.locator.TestNg@c8c12ac]" started-at="2023-05-07T09:31:30 IST" name="abc" finished-at="2023-05-07T09:31:30 IST" duration-ms="23" status="PASS">
+    <test started-at="2023-05-19T09:12:44 IST" name="Default test" finished-at="2023-05-19T09:12:45 IST" duration-ms="70">
+      <class name="assignment.Partice">
+        <test-method signature="f()[pri:0, instance:assignment.Partice@4ec4f3a0]" started-at="2023-05-19T09:12:45 IST" name="f" finished-at="2023-05-19T09:12:45 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- abc -->
-      </class> <!-- com.locator.TestNg -->
+        </test-method> <!-- f -->
+      </class> <!-- assignment.Partice -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
