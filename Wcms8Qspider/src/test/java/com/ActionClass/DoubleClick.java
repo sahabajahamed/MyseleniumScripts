@@ -22,5 +22,5 @@ public class DoubleClick {
 		driver.findElement(By.id("loginButton")).click();
 
 	}
-
+	
 }

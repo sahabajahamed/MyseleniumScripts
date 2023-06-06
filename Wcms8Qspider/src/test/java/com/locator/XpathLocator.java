@@ -3,6 +3,7 @@ package com.locator;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,16 +12,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class XpathLocator {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver= new ChromeDriver();
-		driver.get("https://www.flipkart.com/");
+		WebDriverManager.chromiumdriver().setup();
+		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		WebElement button = driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']"));
-		button.click();
+		
+		driver.get("https://www.amazon.in/");
+		Thread.sleep(3000);
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("watch");
+		driver.findElement(By.id("nav-search-submit-button")).click();
+	;
+		
 
-}
+		driver.close();
+
+	}
 }
