@@ -13,14 +13,25 @@ public class HomePage {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver,this);
 	}
-	
+
 	//identify homepage webelement
-	
+
 	@FindBy (xpath="//a[text()='Home']") public  WebElement Home;
 	@FindBy (id="search")  public WebElement Search;
 	@FindBy (id="searchBtn") public WebElement searchBtn;
 	@FindBy (id="cartIcon") public WebElement CartIcon;
 	@FindBy (xpath="//span[@class='BaseBadge-root MuiBadge-root css-1rzb3uu']") public WebElement AccountSetting;
-	
 
+	public void searchbar(String sec)
+	{
+		Search.sendKeys(sec);
+	}
+	public void clickSearchBtn()
+	{
+		searchBtn.click();
+	}
+	public void clickAccountSetting()
+	{
+		AccountSetting.click();
+	}
 }

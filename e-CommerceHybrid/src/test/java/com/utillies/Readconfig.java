@@ -34,7 +34,7 @@ public class Readconfig {
 	public String getBrowser() {
 		String value = properties.getProperty("browser");
 		return value;
-	
-	
-}
+
+
+	}
 }

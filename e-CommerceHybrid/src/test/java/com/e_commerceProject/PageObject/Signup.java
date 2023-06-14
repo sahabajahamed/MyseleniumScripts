@@ -26,35 +26,35 @@ public class Signup {
 	@FindBy (id="Confirm Password") WebElement confirmPassword;
 	@FindBy (id="Terms and Conditions") WebElement checkBox;
 	@FindBy (id="Register") WebElement register;
-	
-	
-	
+
+
+
 	public void firstName(String fname)
 	{
 		firstname.sendKeys(fname);
 	}
-	
+
 	public void lastname(String lname)
 	{
 		lastName.sendKeys(lname);
 	}
-	
+
 	public void Clickmale()
 	{
 		male.click();
 	}
-	
+
 	public void  phonenumber(String pname)
 
 	{
 		phoneNumber.sendKeys(pname);
-		
+
 	}
 	public void sendemailAdress(String email)
 	{
 		emailAdress.sendKeys(email);
 	}
-	
+
 	public void sendpassword(String psw)
 	{
 		password.sendKeys(psw);
@@ -63,12 +63,12 @@ public class Signup {
 	{
 		confirmPassword.sendKeys(cnfirmpsw);
 	}
-	
+
 	public void clickregister()
 	{
 		register.click();
 	}
-	
-	
+
+
 
 }

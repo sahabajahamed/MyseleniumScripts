@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -18,36 +19,40 @@ public class BaseClass {
 
 	String url =readconfig.getBaseUrl();
 	String browser= readconfig.getBrowser();
-	
+
 	public static WebDriver driver;
 
 	@BeforeClass
-	public void setup() {
-		switch (browser.toLowerCase())
-		{
-		case "chrome":
-			WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver();
-			break;
-		case "edge":
-			WebDriverManager.edgedriver().setup();
-			driver= new EdgeDriver();
-			break;
-		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
-			driver= new FirefoxDriver();
-			break;
-		default:
-			driver= null;
-			break;
-		}
-		//wait code
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-		
-		
-		
+	public void setup(String browser)
+	{
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+			driver= new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			
+		}
+		else if(browser.equalsIgnoreCase("edge"))
+		{
+			driver= new EdgeDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			
+		}
+		else if(browser.equalsIgnoreCase("firefox"))
+		{
+			driver= new FirefoxDriver()	;
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			
+		}
+		else
+		{
+			Reporter.log("InvalidBrowser ",true);
+		}
 	}
+
 	@AfterClass
 	public void tearDown() {
 		driver.close();

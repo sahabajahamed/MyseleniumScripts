@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -20,7 +21,8 @@ public class DragAndDrop {
 		driver.get("https://demo.guru99.com/test/drag_drop.html");
 		WebElement src1 = driver.findElement(By.xpath("//a[text()=' BANK ']"));
 		WebElement target1 = driver.findElement(By.xpath("///li[@class='placeholder']/ancestor::ol[@id='bank']"));
-		
+		Actions act=new Actions(driver);
+		act.dragAndDrop(src1, target1).build().perform();
 		
 		
 

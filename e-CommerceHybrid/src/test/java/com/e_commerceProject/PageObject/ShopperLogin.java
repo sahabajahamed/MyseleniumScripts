@@ -12,42 +12,42 @@ public class ShopperLogin {
 	{
 		ldriver= rdriver;
 		PageFactory.initElements(rdriver, this);
-		
-		
+
+
 	}
 	//identify webelement
-	
+
 	@FindBy(id = "Email")
 	WebElement email;
-	
+
 	@FindBy(id = "Password")
 	WebElement password;
 	@FindBy(id="Login") private WebElement loginButton;
-	
-	
-	
-	
-	
+
+
+
+
+
 	//identify action on webelement
-	
+
 	public void EmailAdress(String emailadd)
-	
+
 	{
 		email.sendKeys(emailadd);
-	
+
 	}
 	public void Password(String pswd)
-	
+
 	{
 		password.sendKeys(pswd);
-		
+
 	}
-	
+
 	public void clickLoginButton() {
 		loginButton.click();
 	}
-	
-	
+
+
 
 
 }
