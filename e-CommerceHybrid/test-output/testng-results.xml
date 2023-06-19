@@ -2,29 +2,35 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-06T23:05:13 IST" name="Suite" finished-at="2023-06-06T23:05:13 IST" duration-ms="67">
+  <suite started-at="2023-06-14T20:52:03 IST" name="Default suite" finished-at="2023-06-14T20:52:03 IST" duration-ms="120">
     <groups>
     </groups>
-    <test started-at="2023-06-06T23:05:13 IST" name="Test" finished-at="2023-06-06T23:05:13 IST" duration-ms="67">
+    <test started-at="2023-06-14T20:52:03 IST" name="Default test" finished-at="2023-06-14T20:52:03 IST" duration-ms="120">
       <class name="com.testcase.TC_01_SHPSTK_LOGIN">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.testcase.TC_01_SHPSTK_LOGIN@55182842]" started-at="2023-06-06T23:05:13 IST" name="setup" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1686072913599" status="FAIL">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.testcase.TC_01_SHPSTK_LOGIN@55b699ef]" started-at="2023-06-14T20:52:03 IST" name="setup" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1686756123946" status="FAIL">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
-Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setup.
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated setup.
 For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setup.
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated setup.
 For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
 at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:350)
 at org.testng.internal.Parameters.createParameters(Parameters.java:693)
 at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
 at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:829)
 at org.testng.TestRunner.run(TestRunner.java:602)
@@ -47,24 +53,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="VerifyUserShouldBeAbleToLogin()[pri:0, instance:com.testcase.TC_01_SHPSTK_LOGIN@55182842]" started-at="2023-06-06T23:05:13 IST" name="VerifyUserShouldBeAbleToLogin" finished-at="2023-06-06T23:05:13 IST" duration-ms="1" status="SKIP">
+        <test-method signature="VerifyUserShouldBeAbleToLogin()[pri:0, instance:com.testcase.TC_01_SHPSTK_LOGIN@55b699ef]" started-at="2023-06-14T20:52:03 IST" name="VerifyUserShouldBeAbleToLogin" finished-at="2023-06-14T20:52:03 IST" duration-ms="0" status="SKIP">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
-Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setup.
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated setup.
 For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setup.
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated setup.
 For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
 at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:350)
 at org.testng.internal.Parameters.createParameters(Parameters.java:693)
 at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
 at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:829)
 at org.testng.TestRunner.run(TestRunner.java:602)
@@ -87,11 +99,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyUserShouldBeAbleToLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcase.TC_01_SHPSTK_LOGIN@55182842]" started-at="2023-06-06T23:05:13 IST" name="tearDown" finished-at="2023-06-06T23:05:13 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcase.TC_01_SHPSTK_LOGIN@55b699ef]" started-at="2023-06-14T20:52:03 IST" name="tearDown" finished-at="2023-06-14T20:52:03 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.testcase.TC_01_SHPSTK_LOGIN -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

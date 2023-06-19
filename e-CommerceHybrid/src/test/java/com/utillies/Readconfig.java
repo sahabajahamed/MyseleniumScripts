@@ -8,7 +8,7 @@ import java.util.Properties;
 public class Readconfig {
 
 	Properties properties;
-	String path="C:\\Users\\Wasim Ahamed\\OneDrive\\Desktop\\wcsm8 workspace\\DemoProject\\Configuration\\config.properties";
+	String path="./Configuration/config.properties";
 
 	public  Readconfig() {
 		properties =new Properties();

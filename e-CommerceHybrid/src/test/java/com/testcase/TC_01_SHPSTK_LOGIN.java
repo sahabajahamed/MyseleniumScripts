@@ -9,10 +9,6 @@ public class TC_01_SHPSTK_LOGIN extends BaseClass {
 	@Test
 	public void VerifyUserShouldBeAbleToLogin()
 	{
-		//openurl
-		driver.get(url);
-
-
 		indexPage pg= new indexPage(driver);
 
 		pg.ClickOnLogin();
